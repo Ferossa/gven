@@ -10,7 +10,7 @@ type Context struct {
 
 // GetTargets returns all build targets
 func (c *Context) GetTargets() (r []string) {
-	for n, _ := range c.Config.Targets {
+	for n := range c.Config.Targets {
 		r = append(r, n)
 	}
 
@@ -20,7 +20,7 @@ func (c *Context) GetTargets() (r []string) {
 // GetDependencies returns all dependencies for current environment
 func (c *Context) GetDependencies() (r []string) {
 	for _, target := range c.Config.Targets {
-		for n, _ := range target.Dependencies {
+		for n := range target.Dependencies {
 			r = append(r, n)
 		}
 
@@ -28,7 +28,7 @@ func (c *Context) GetDependencies() (r []string) {
 			continue
 		}
 
-		for n, _ := range target.Development {
+		for n := range target.Development {
 			r = append(r, n)
 		}
 	}
