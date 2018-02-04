@@ -1,17 +1,19 @@
 {
   "version": "1.0",
   "targets": {
-    "package/name": "output/build/path"
-  },
-  "dependencies": [
-    {
-      "package": "package/name",
-      "version": "versionMask",
-      "path": "repository/path",
-      "type": "repositoryType[path,go,git]"
+    "package/name": "output/build/path",
+    "deps": {
+      "package/name": "v0.*",
+      "package2/name": "dev-123"
+    },
+    "dev": {
+      "another/package": "somecommithash"
     }
-  ],
-  "commands": {
-    "test": "echo test"
+  },
+  "repositories": {
+    "package/name": {
+      "url": "path/to/repository",
+      "type": "git"
+    }
   }
 }
