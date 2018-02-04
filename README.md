@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/ferossa/gven.svg)](https://travis-ci.org/ferossa/gven)
+[![Go Report](https://goreportcard.com/badge/github.com/ferossa/gven)](https://goreportcard.com/report/github.com/ferossa/gven)
+
 GVen
 ====
 
