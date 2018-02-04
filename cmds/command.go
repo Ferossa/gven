@@ -1,8 +1,8 @@
 package cmds
 
 import (
-	"../libs"
-	"../structs"
+	"github.com/ferossa/gven/libs"
+	"github.com/ferossa/gven/structs"
 )
 
 // CommandRepository map where all commands stored

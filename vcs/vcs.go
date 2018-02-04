@@ -1,7 +1,7 @@
 package vcs
 
 import (
-	"../libs"
+	"github.com/ferossa/gven/libs"
 )
 
 var VCSRepository map[string]IVersionControlSystem

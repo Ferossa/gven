@@ -1,10 +1,10 @@
 package main
 
 import (
-	"./cmds"
-	"./libs"
-	"./structs"
 	"encoding/json"
+	"github.com/ferossa/gven/cmds"
+	"github.com/ferossa/gven/libs"
+	"github.com/ferossa/gven/structs"
 	"io/ioutil"
 	"log"
 	"os"

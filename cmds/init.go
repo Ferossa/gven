@@ -1,7 +1,7 @@
 package cmds
 
 import (
-	"../structs"
+	"github.com/ferossa/gven/structs"
 	"log"
 )
 

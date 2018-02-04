@@ -1,8 +1,8 @@
 package cmds
 
 import (
-	"../structs"
-	"../vcs"
+	"github.com/ferossa/gven/structs"
+	"github.com/ferossa/gven/vcs"
 	"log"
 	"path"
 	"strings"
