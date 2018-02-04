@@ -2,9 +2,9 @@ package structs
 
 import (
 	"encoding/json"
-	"path/filepath"
-	"io/ioutil"
 	"fmt"
+	"io/ioutil"
+	"path/filepath"
 )
 
 const configVersion = "1"

@@ -2,9 +2,9 @@ package libs
 
 import (
 	"bytes"
+	"log"
 	"os"
 	"os/exec"
-	"log"
 )
 
 type Command struct {
@@ -20,7 +20,7 @@ func (c *Command) Exec(name string, args []string) (out string, err error) {
 	command := exec.Command(name, args...)
 	command.Env = append(command.Env, "PATH="+os.Getenv("PATH"))
 	for k, v := range c.Env {
-		command.Env = append(command.Env, k + "=" + v)
+		command.Env = append(command.Env, k+"="+v)
 	}
 	if _, ok := c.Env["GOPATH"]; !ok {
 		command.Env = append(command.Env, "GOPATH="+cwd)

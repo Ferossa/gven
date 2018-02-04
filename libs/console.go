@@ -14,7 +14,7 @@ type IConsole interface {
 	FlagInt64(name string, def int64) int64
 	FlagBool(name string, def bool) bool
 	Exec(f, name string, args []string) (res string, err error)
-	Pipe(f, name string, args []string, pipeTo string, argsTo[]string) (res string, err error)
+	Pipe(f, name string, args []string, pipeTo string, argsTo []string) (res string, err error)
 }
 
 type Console struct {
@@ -111,7 +111,7 @@ func (c *Console) Exec(f, name string, args []string) (res string, err error) {
 	return
 }
 
-func (c *Console) Pipe(f, name string, args []string, pipeTo string, argsTo[]string) (res string, err error) {
+func (c *Console) Pipe(f, name string, args []string, pipeTo string, argsTo []string) (res string, err error) {
 	cmd := exec.Command(name, args...)
 	cmd.Dir = f
 

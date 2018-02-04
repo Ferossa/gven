@@ -1,10 +1,10 @@
 package structs
 
 type Context struct {
-	IsDevMode    bool
-	GoPath       string
-	ProjectPath  string
-	Config       *Config
+	IsDevMode   bool
+	GoPath      string
+	ProjectPath string
+	Config      *Config
 }
 
 func (c *Context) GetTargets() (r []string) {
