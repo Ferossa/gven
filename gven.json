@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "targets": {
+    ".": {
+      "output": "${GOPATH}/bin/gven",
+      "deps": {},
+      "dev": {}
+    }
+  },
+  "repos": {}
+}

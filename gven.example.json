@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "targets": {
+    "package/name": "output/build/path"
+  },
+  "dependencies": [
+    {
+      "package": "package/name",
+      "version": "versionMask",
+      "path": "repository/path",
+      "type": "repositoryType[path,go,git]"
+    }
+  ],
+  "commands": {
+    "test": "echo test"
+  }
+}
