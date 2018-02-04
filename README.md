@@ -44,3 +44,7 @@ gven build [target]
 ```
 
 Build targets. Build all if no targets specified.
+
+### Notes
+
+Development environment is determined by GODEV environment variable.
