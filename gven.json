@@ -1,7 +1,8 @@
 {
   "version": "1.0",
+  "overrideGopath": false,
   "targets": {
-    ".": {
+    "github.com/ferossa/gven": {
       "output": "${GOPATH}/bin/gven",
       "deps": {},
       "dev": {}

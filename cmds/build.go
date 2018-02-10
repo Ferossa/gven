@@ -4,6 +4,7 @@ import (
 	"github.com/ferossa/gven/libs"
 	"github.com/ferossa/gven/structs"
 	"log"
+	"os"
 	"path"
 	"strings"
 )
@@ -41,6 +42,9 @@ func (c *BuildCommand) Run(ctx *structs.Context) {
 		}
 
 		command := &libs.Command{}
+		if !ctx.Config.OverrideGopath {
+			command.Env = map[string]string{"GOPATH": os.Getenv("GOPATH")}
+		}
 		_, err := command.Exec("go", []string{"build", "-o", buildPath, t})
 		if err != nil {
 			log.Println(err)

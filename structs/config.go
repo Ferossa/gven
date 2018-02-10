@@ -10,13 +10,15 @@ import (
 const configVersion = "1"
 
 type Config struct {
-	Version      string                `json:"version"`
-	Targets      map[string]Target     `json:"targets"`
-	Repositories map[string]Repository `json:"repos"`
+	Version        string                `json:"version"`
+	OverrideGopath bool                  `json:"overrideGopath"`
+	Targets        map[string]Target     `json:"targets"`
+	Repositories   map[string]Repository `json:"repos"`
 }
 
 func (c *Config) Init(dir string) error {
 	c.Version = configVersion
+	c.OverrideGopath = true
 	c.Targets = make(map[string]Target)
 	c.Repositories = make(map[string]Repository)
 
