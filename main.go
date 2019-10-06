@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 )
 
-const version = "v0.1.3"
+const version = "v0.1.4"
 
 func main() {
 	// intro log

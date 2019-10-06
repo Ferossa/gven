@@ -42,8 +42,10 @@ func (c *BuildCommand) Run(ctx *structs.Context) {
 		}
 
 		command := &libs.Command{}
+		command.Env["HOME"] = os.Getenv("HOME")
+		command.Env["GOCACHE"] = os.Getenv("GOCACHE")
 		if !ctx.Config.OverrideGopath {
-			command.Env = map[string]string{"GOPATH": os.Getenv("GOPATH")}
+			command.Env["GOPATH"] = os.Getenv("GOPATH")
 		}
 		_, err := command.Exec("go", []string{"build", "-o", buildPath, t})
 		if err != nil {
